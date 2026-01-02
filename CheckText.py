@@ -1,41 +1,52 @@
-texto = input("Ingresa un texto a elección: ")
-letras = []
+"""
+LEARN BY DOING - TEXT ANALYZER
+==============================
+"""
 
-texto = texto.lower()
+print("LEARN PYTHON - TEXT ANALYZER")
+print("=" * 40)
 
-letras.append(input("Ingresa la primera letra: ".lower()))
-letras.append(input("Ingresa la segunda letra: ".lower()))
-letras.append(input("Ingresa la tercera letra: ".lower()))
+# Lesson 1: Getting input
+print("\n📝 LESSON 1: GETTING TEXT")
+print("The input() function gets text from user:")
+user_text = input("Try typing your name: ")
+print(f"Hello {user_text}! You typed: '{user_text}'")
 
-print("\n")
-print("CANTIDAD DE LETRAS")
-cantidad_letras1 = texto.count(letras[0])
-cantidad_letras2 = texto.count(letras[1])
-cantidad_letras3 = texto.count(letras[2])
+# Lesson 2: Counting letters
+print("\n📝 LESSON 2: COUNTING LETTERS")
+print("The count() method counts letters:")
 
-print(f"Hemos encontrado la letra '{letras[0]}' repetida {cantidad_letras1} veces")
-print(f"Hemos encontrado la letra '{letras[1]}' repetida {cantidad_letras2} veces")
-print(f"Hemos encontrado la letra '{letras[2]}' repetida {cantidad_letras3} veces")
+sample = "banana"
+letter_to_count = "a"
+result = sample.count(letter_to_count)
 
-print("\n")
-print("CANTIDAD DE PALABRAS")
-palabras = texto.split()
-print(f"Hemos encontrado {len(palabras)} palabras en tu texto")
+print(f"In '{sample}', the letter '{letter_to_count}' appears {result} times")
 
-print("\n")
-print("LETRAS DE INICIO Y DE FIN")
-letra_inicio = texto[0]
-letra_final = texto[-1]
-print(f"La letra inicial es '{letra_inicio}' y la letra final es '{letra_final}'")
+# Lesson 3: Splitting words
+print("\n📝 LESSON 3: SPLITTING WORDS")
+print("The split() method divides text into words:")
 
-print("\n")
-print("TEXTO INVERTIDO")
-palabras.reverse()
-texto_invertido = ' '.join(palabras)
-print(f"Si ordenamos tu texto al revés va a decir: '{texto_invertido}'")
+sample_sentence = "Python is fun"
+words_list = sample_sentence.split()
 
-print("\n")
-print("BUSCANDO LA PALABRA PYTHON")
-buscar_python = 'python' in texto
-dic = {True:"sí", False:"no"}
-print(f"La palabra 'Python' {dic[buscar_python]} se encuentra en el texto")
+print(f"Sentence: '{sample_sentence}'")
+print(f"Words: {words_list}")
+print(f"Number of words: {len(words_list)}")
+
+# Now you try!
+print("\n" + "=" * 40)
+print("NOW YOU TRY!")
+print("=" * 40)
+
+your_text = input("Write a sentence: ")
+print(f"\nYour sentence: '{your_text}'")
+print(f"It has {len(your_text)} characters")
+
+words = your_text.split()
+print(f"It has {len(words)} words")
+
+if your_text:
+    print(f"First character: '{your_text[0]}'")
+    print(f"Last character: '{your_text[-1]}'")
+
+print("\nGreat job! You're learning Python! 🎉")
