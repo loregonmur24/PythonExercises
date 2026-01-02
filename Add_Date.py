@@ -2,8 +2,6 @@
 PROGRAM: Date Manager
 DESCRIPTION: A simple application to store, retrieve, and manage dates associated with names.
              Data is persistently stored in a JSON file.
-AUTHOR: Your Name
-VERSION: 1.0
 """
 
 # Import the json module for working with JSON files
@@ -325,3 +323,4 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"\n✗ An unexpected error occurred: {e}")
         print("Please check file permissions and try again.")
+
